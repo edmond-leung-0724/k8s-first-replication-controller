@@ -1,3 +1,5 @@
+1)
+
 kubectl create -f nginx-rc.yaml
 
 kubectl get pods
@@ -6,7 +8,7 @@ kubectl get po -l app=nginx-app
 
 kubectl describe rc nginx-rc
 
-Shutdown Node (Node Fail)
+2) Shutdown Node (Node Fail)
 
 kubectl get po -o wide
 
@@ -18,7 +20,7 @@ Auto create new pod in another node
 
 kubectl get po -o wide
 
-Scaling up
+3) Scaling up
 
 kubectl scale rc nginx-rc --replicas=5
 
@@ -26,7 +28,7 @@ kubectl get rc nginx-rc
 
 kubectl get po -o wide
 
-Scaling down
+4) Scaling down
 
 kubectl scale rc nginx-rc --replicas=3
 
@@ -34,7 +36,7 @@ kubectl get rc nginx-rc
 
 kubectl get po -o wide
 
-Delete
+5) Delete
 
 kubectl delete -f nginx-rc.yaml
 
