@@ -1,4 +1,4 @@
-1)
+1) Create pod
 
 kubectl create -f nginx-rc.yaml
 
