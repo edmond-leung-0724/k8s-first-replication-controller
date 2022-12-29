@@ -1,1 +1,43 @@
-# k8s-first-replication-controller
+kubectl create -f nginx-rc.yaml
+
+kubectl get pods
+
+kubectl get po -l app=nginx-app
+
+kubectl describe rc nginx-rc
+
+Shutdown Node (Node Fail)
+
+kubectl get po -o wide
+
+Shutdown 1 node
+
+kubectl get nodes
+
+Auto create new pod in another node
+
+kubectl get po -o wide
+
+Scaling up
+
+kubectl scale rc nginx-rc --replicas=5
+
+kubectl get rc nginx-rc
+
+kubectl get po -o wide
+
+Scaling down
+
+kubectl scale rc nginx-rc --replicas=3
+
+kubectl get rc nginx-rc
+
+kubectl get po -o wide
+
+Delete
+
+kubectl delete -f nginx-rc.yaml
+
+kubectl get rc
+
+kubectl get po -l app=nginx-app
